@@ -1,0 +1,6 @@
+{
+  "name": "Task Tracker Next.js & Prisma",
+  "description": "Sistem Pengurusan Tugasan (Task Tracker) lengkap dengan Next.js App Router, Tailwind CSS, Prisma ORM, dan PostgreSQL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
