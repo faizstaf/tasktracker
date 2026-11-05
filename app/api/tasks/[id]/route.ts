@@ -2,17 +2,16 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '../../../../lib/prisma';
 
-interface RouteParams {
-  params: Promise<{ id: string }> | { id: string };
-}
+type RouteParams = {
+  params: Promise<{ id: string }>;
+};
 
 export const dynamic = 'force-dynamic';
 
 // 1. GET: Mengambil satu tugasan mengikut ID
 export async function GET(request: Request, props: RouteParams) {
   try {
-    const params = await props.params;
-    const { id } = params;
+    const { id } = await props.params;
 
     const task = await prisma.task.findUnique({
       where: { id },
@@ -38,8 +37,7 @@ export async function GET(request: Request, props: RouteParams) {
 // 2. PUT: Mengemaskini tugasan (title, description, isCompleted)
 export async function PUT(request: Request, props: RouteParams) {
   try {
-    const params = await props.params;
-    const { id } = params;
+    const { id } = await props.params;
     const body = await request.json();
     const { title, description, isCompleted } = body;
 
@@ -102,8 +100,7 @@ export async function PUT(request: Request, props: RouteParams) {
 // 3. DELETE: Memadam tugasan mengikut ID
 export async function DELETE(request: Request, props: RouteParams) {
   try {
-    const params = await props.params;
-    const { id } = params;
+    const { id } = await props.params;
 
     const existingTask = await prisma.task.findUnique({
       where: { id },
