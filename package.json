@@ -6,7 +6,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-  "@prisma/client": "^6.4.1",
-  "prisma": "^6.4.1"
+  "@prisma/client": "^6.19.3",
+  "next": "^15.2.0",
+  "prisma": "^6.19.3",
+  "react": "^19.0.1",
+  "react-dom": "^19.0.1",
+  "lucide-react": "^0.470.0",
+  "tailwindcss": "^3.4.1",
+  "postcss": "^8.4.35",
+  "autoprefixer": "^10.4.18"
 }
 }
